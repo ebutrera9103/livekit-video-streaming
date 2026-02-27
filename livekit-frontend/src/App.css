@@ -1,0 +1,172 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Fondo tipo Secretsy */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: radial-gradient(circle at top, #8c2bce 0, #180020 45%, #05000e 100%);
+  color: #f9f5ff;
+}
+
+/* Layout general de la llamada */
+.secret-call-shell {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* “Card” principal */
+.secret-call-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  max-height: 720px;
+  background: radial-gradient(circle at top, #3a064e 0, #15001f 60%, #0b0013 100%);
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(248, 113, 180, 0.3); /* magenta suave */
+}
+
+/* Header */
+.secret-call-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.secret-call-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.secret-call-pill {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(248, 113, 180, 0.15);
+  border: 1px solid rgba(248, 113, 180, 0.5);
+  color: #f9a8d4;
+}
+
+/* Zona central: video + chat */
+.secret-main {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  min-height: 0;
+}
+
+/* Video */
+.secret-video-wrapper {
+  flex: 1;
+  min-width: 0;
+  background: radial-gradient(circle at top, #4c1d95 0, #0f172a 60%);
+  border-radius: 20px;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 2px solid rgba(168, 85, 247, 0.8); /* morado brillante */
+}
+
+/* Chat */
+.secret-chat-panel {
+  width: 320px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 27, 148, 0.6);
+}
+
+/* Header de chat */
+.secret-chat-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.9);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Lista de mensajes */
+.secret-chat-messages {
+  flex: 1;
+  padding: 10px 12px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.secret-chat-entry {
+  margin-bottom: 8px;
+}
+
+.secret-chat-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f472b6; /* magenta */
+  margin-bottom: 2px;
+}
+
+.secret-chat-bubble {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 16px;
+  background: rgba(30, 64, 175, 0.6);
+  color: #e5e7eb;
+}
+
+/* Input del chat */
+.secret-chat-input {
+  padding: 10px;
+  border-top: 1px solid rgba(51, 65, 85, 0.9);
+  display: flex;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.secret-chat-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(75, 85, 99, 0.9);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 0.85rem;
+}
+
+.secret-chat-input input::placeholder {
+  color: #9ca3af;
+}
+
+.secret-chat-input button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #f97316, #ec4899);
+  color: #0b0210;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Barra de controles inferior */
+.secret-controls {
+  margin-top: 14px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.9);
+}
